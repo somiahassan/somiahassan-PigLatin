@@ -17,6 +17,17 @@ public class PigLatin {
      * @return the pig latin form of in.
      */
     public String returnPigLatin(String in){
-        return "";
+        if (in == null || in.isEmpty()) {
+            return in; // Return the input if it's null or empty
+        }
+
+        // Extract the first character and the rest of the word
+        String firstChar = in.substring(0, 1);
+        String restOfWord = in.substring(1);
+
+        // Form the Pig Latin word
+        String pigLatin = restOfWord + firstChar + "ay";
+
+        return pigLatin;
     }
 }
